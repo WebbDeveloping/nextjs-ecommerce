@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/Image";
+// import Image from "next/image";
 import blogPosts from "../data/blogPosts.json";
 import NavStatic from "../components/Navigation/NavStatic";
 import InstagramSection from "../components/LayoutComponents/InstagramSection";
 import FooterNew from "../components/LayoutComponents/FooterNew";
-import InnerHero from "../components/Hero/InnerHero";
+// import InnerHero from "../components/Hero/InnerHero";
 import HeaderIntro from "../components/HeaderIntro/HeaderIntro";
 import Breadcrumbs from "../components/Breadcrumbs/Breadcrumbs";
-import Pagination from "../components/Pagination/Pagination";
+// import Pagination from "../components/Pagination/Pagination";
 import FeaturedPosts from "../components/Blog/FeaturedPosts";
 import TagBlock from "../components/Blog/TagBlock";
 import MailingList from "../components/MailingList/MailingList";

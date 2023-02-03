@@ -32,7 +32,7 @@ const Pagination = () => {
       </div>
       <div
         aria-label="Page 1 of 1"
-        role="heading"
+        aria-level={2}
         className="w-page-count page-count"
       ></div>
       <div className="pagination-right">
