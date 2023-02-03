@@ -32,19 +32,19 @@ function ProductCardHome(props) {
       <div data-w-id={props.product.id} className="product-card">
         <div className="product-card-image-wrapper">
           <Link href="/products/[href]" as={`/products/${props.product.href}`}>
-            <a
+            <div
               data-w-id={props.product.id}
               href="#"
               className="product-card-image-link w-inline-block"
             >
-              <img
+              <Image
                 width={300}
                 height={300}
                 src={props?.product?.image}
                 alt=""
                 className="product-card-image"
               />
-            </a>
+            </div>
           </Link>
           {props.product.onSale ? (
             <div className="badge product-card-sale"></div>

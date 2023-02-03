@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import Image from "next/Image";
+import Image from "next/image";
 import NavStatic from "../components/Navigation/NavStatic";
 import InstagramSection from "../components/LayoutComponents/InstagramSection";
 import FooterNew from "../components/LayoutComponents/FooterNew";

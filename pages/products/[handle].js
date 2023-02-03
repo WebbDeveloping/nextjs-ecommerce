@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/Image";
+// import Image from "next/image";
 import { useRouter } from "next/router";
 import products from "../../data/products.json";
 import Navigation from "../../components/Navigation/Navigation";
 import FooterNew from "../../components/LayoutComponents/FooterNew";
 import ProductCardHome from "../../components/ProductCard/ProductCardHome";
-import HeaderIntro from "../../components/HeaderIntro/HeaderIntro";
+// import HeaderIntro from "../../components/HeaderIntro/HeaderIntro";
 import Breadcrumbs from "../../components/Breadcrumbs/Breadcrumbs";
 import AddToCartForm from "../../components/Forms/AddToCartForm";
 import ProductThumbs from "../../components/Product/ProductThumbs";

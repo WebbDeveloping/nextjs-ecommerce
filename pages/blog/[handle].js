@@ -13,7 +13,7 @@ function Article({ article }) {
     if (blogPosts.length > 0) {
       setBlogPostsArr(blogPosts);
     }
-  }, [blogPosts]);
+  }, []);
 
   return (
     <div>
