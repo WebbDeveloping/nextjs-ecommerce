@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from "react";
-import Link from "next/link";
-import Image from "next/image";
+// import Link from "next/link";
+// import Image from "next/image";
 import { useRouter } from "next/router";
 import FooterNew from "../components/LayoutComponents/FooterNew";
 import InstagramSection from "../components/LayoutComponents/InstagramSection";
 import NavStatic from "../components/Navigation/NavStatic";
 import products from "../data/products.json";
 import ProductCardHome from "../components/ProductCard/ProductCardHome";
-import InnerHero from "../components/Hero/InnerHero";
+// import InnerHero from "../components/Hero/InnerHero";
 import HeaderIntro from "../components/HeaderIntro/HeaderIntro";
 import Breadcrumbs from "../components/Breadcrumbs/Breadcrumbs";
-import FeaturedBlock from "../components/SideBar/FeaturedBlock";
-import CategoriesBlock from "../components/SideBar/CategoriesBlock";
+// import FeaturedBlock from "../components/SideBar/FeaturedBlock";
+// import CategoriesBlock from "../components/SideBar/CategoriesBlock";
 import ShopSidebar from "../components/SideBar/ShopSideBar";
 
 function Shop() {

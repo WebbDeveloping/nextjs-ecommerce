@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 function PopUpSubscribe(props) {
   return (
@@ -15,7 +16,7 @@ function PopUpSubscribe(props) {
           href="#"
           className="close-button w-inline-block"
         >
-          <img src="images/x.svg" alt="" />
+          <Image width={50} height={50} src="images/x.svg" alt="" />
         </a>
         <div className="subscribe-popup-image"></div>
         <div className="subscribe-popup-info">

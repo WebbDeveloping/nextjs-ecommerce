@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 function ProductQuickView(props) {
   return (
@@ -26,9 +27,15 @@ function ProductQuickView(props) {
           className="close-button w-inline-block"
           onClick={(e) => props.openModal(e)}
         >
-          <img src="images/x.svg" alt="" />
+          <Image width={18} height={18} src="images/x.svg" alt="" />
         </button>
-        <img src={props.product.image} alt="" className="popup-image" />
+        <Image
+          width={18}
+          height={18}
+          src={props.product.image}
+          alt=""
+          className="popup-image"
+        />
         <div className="quick-view-info">
           {props.product.sku && (
             <div className="product-top-info">
@@ -73,7 +80,7 @@ function ProductQuickView(props) {
                   aria-haspopup="dialog"
                   className="w-commerce-commerceaddtocartbutton button add-to-cart-button"
                 />
-                <a
+                <button
                   data-node-type="commerce-buy-now-button"
                   data-default-text="Buy now"
                   data-subscription-text="Subscribe now"
@@ -83,7 +90,7 @@ function ProductQuickView(props) {
                   href="checkout.html"
                 >
                   Buy now
-                </a>
+                </button>
               </div>
             </form>
             <div
