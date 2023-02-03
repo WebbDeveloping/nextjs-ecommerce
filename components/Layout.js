@@ -12,7 +12,7 @@ export default function Layout({ children }) {
       setSelectedProducts([]);
       setSuccess(true);
     }
-  }, []);
+  }, [setSelectedProducts]);
   return (
     <div>
       <div className="page-wrapper">
