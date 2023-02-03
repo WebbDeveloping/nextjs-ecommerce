@@ -28,7 +28,7 @@ function Article({ article }) {
             <div className="post-category">
               <div className="title">Published in </div>
               <Link href={`/blog/${article.Category}`}>
-                <a className="title link-title">{article.Category}</a>
+                <div className="title link-title">{article.Category}</div>
               </Link>
             </div>
             <h1 className="post-page-heading">{article.Name}</h1>
@@ -36,27 +36,27 @@ function Article({ article }) {
           </div>
           <div className="breadcrumbs">
             <Link href="/">
-              <a className="link-dark">Home</a>
+              <div className="link-dark">Home</div>
             </Link>
             <Image
               src="/images/right.svg"
-              width="13px"
-              height="13px"
+              width={13}
+              height={13}
               alt=""
               className="breadcrumbs-divider"
             />
             <Link href="/blog">
-              <a className="link-dark">Blog</a>
+              <div className="link-dark">Blog</div>
             </Link>
             <Image
               src="/images/right.svg"
-              width="13px"
-              height="13px"
+              width={13}
+              height={13}
               alt=""
               className="breadcrumbs-divider"
             />
             <Link href={article["Slug"]}>
-              <a className="link-dark">{article.Name}</a>
+              <div className="link-dark">{article.Name}</div>
             </Link>
           </div>
         </div>
@@ -81,45 +81,45 @@ function Article({ article }) {
                   <br />
                   this Post
                 </div>
-                <a
+                <Link
                   href="https://www.instagram.com/3sistersboutiquepnw/"
                   target="_blank"
                   className="share-button w-inline-block"
                 >
                   <Image
                     src="/images/instagram-color.svg"
-                    width="24px"
-                    height="24px"
+                    width={24}
+                    height={24}
                     alt=""
                     className="full-width"
                   />
-                </a>
-                <a
+                </Link>
+                <Link
                   href="https://www.facebook.com/threesisterspnw/"
                   target="_blank"
                   className="share-button w-inline-block"
                 >
                   <Image
                     src="/images/facebook-color.svg"
-                    width="24px"
-                    height="24px"
+                    width={24}
+                    height={24}
                     alt=""
                     className="full-width"
                   />
-                </a>
-                <a
+                </Link>
+                <Link
                   href="https://pinterest.com/"
                   target="_blank"
                   className="share-button w-inline-block"
                 >
                   <Image
                     src="/images/pinterest-color.svg"
-                    width="24px"
-                    height="24px"
+                    width={24}
+                    height={24}
                     alt=""
                     className="full-width"
                   />
-                </a>
+                </Link>
               </div>
             </div>
             <div className="post-content">
@@ -134,9 +134,9 @@ function Article({ article }) {
                     {blogPostsArr.length > 1 ? (
                       blogPostsArr.map((post, id) => {
                         <div key={id} role="listitem" className="w-dyn-item">
-                          <a href="#" className="tag w-inline-block">
+                          <Link href="#" className="tag w-inline-block">
                             <div>{post.Tags}</div>
-                          </a>
+                          </Link>
                         </div>;
                       })
                     ) : (
@@ -158,9 +158,9 @@ function Article({ article }) {
                         return (
                           <div key={id} role="listitem" className="w-dyn-item">
                             <Link href={`/blog/${post["Category"]}`}>
-                              <a className="sidebar-category">
+                              <div className="sidebar-category">
                                 {post["Category"]}
-                              </a>
+                              </div>
                             </Link>
                           </div>
                         );
@@ -181,23 +181,22 @@ function Article({ article }) {
                       blogPosts.map((post, id) => {
                         return (
                           <div key={id} role="listitem" className="w-dyn-item">
-                            <a
-                              href="#"
-                              className="sidebar-featured-post w-inline-block"
-                            >
-                              <div
-                                className="sidebar-post-image"
-                                style={{
-                                  backgroundImage: `url(${post["Thumbnail"]})`,
-                                }}
-                              ></div>
-                              <div className="sidebar-post-info">
-                                <div className="sidebar-post-date"></div>
-                                <div className="sidebar-post-heading">
-                                  {post["Name"]}
+                            <Link href="#">
+                              <div className="sidebar-featured-post w-inline-block">
+                                <div
+                                  className="sidebar-post-image"
+                                  style={{
+                                    backgroundImage: `url(${post["Thumbnail"]})`,
+                                  }}
+                                ></div>
+                                <div className="sidebar-post-info">
+                                  <div className="sidebar-post-date"></div>
+                                  <div className="sidebar-post-heading">
+                                    {post["Name"]}
+                                  </div>
                                 </div>
                               </div>
-                            </a>
+                            </Link>
                           </div>
                         );
                       })
@@ -225,8 +224,8 @@ function Article({ article }) {
                     <div className="full-width-input-wrapper">
                       <Image
                         src="/images/at-sign.svg"
-                        width="24px"
-                        height="24px"
+                        width={24}
+                        height={24}
                         alt=""
                         className="input-icon"
                       />
@@ -265,52 +264,53 @@ function Article({ article }) {
                 </div>
               </div>
               <div className="sidebar-block sticky">
-                <a
+                <Link
                   data-w-id="0678a845-24d6-9d2a-35e1-5a4d957f8b22"
-                  href="shop.html"
-                  className="banner w-inline-block"
+                  href="/Shop"
                 >
-                  <div className="banner-header">
-                    <div className="title small-title">
-                      <span className="text-color">New</span> Arrivals
-                    </div>
-                    <h5>Explore Our Shop</h5>
-                  </div>
-                  <div className="banner-image-wrapper">
-                    <Image
-                      src="/images/5.png"
-                      width="260px"
-                      height="350px"
-                      alt=""
-                      className="banner-image"
-                    />
-                    <div
-                      style={{
-                        WebkitTransform:
-                          "translate3d(0, 0, 0) scale3d(0.5, 0.5, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)",
-                        MozTransform:
-                          "translate3d(0, 0, 0) scale3d(0.5, 0.5, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)",
-                        MsTransform:
-                          "translate3d(0, 0, 0) scale3d(0.5, 0.5, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)",
-                        transform:
-                          "translate3d(0, 0, 0) scale3d(0.5, 0.5, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)",
-                        opacity: "0",
-                      }}
-                      className="button banner-button"
-                    >
-                      <div className="button-icon-wrapper w-clearfix">
-                        <Image
-                          src="/images/cart.svg"
-                          width="24px"
-                          height="24px"
-                          alt=""
-                          className="button-icon left"
-                        />
+                  <div className="banner w-inline-block">
+                    <div className="banner-header">
+                      <div className="title small-title">
+                        <span className="text-color">New</span> Arrivals
                       </div>
-                      <div>Shop Now</div>
+                      <h5>Explore Our Shop</h5>
+                    </div>
+                    <div className="banner-image-wrapper">
+                      <Image
+                        src="/images/5.png"
+                        width="260px"
+                        height="350px"
+                        alt=""
+                        className="banner-image"
+                      />
+                      <div
+                        style={{
+                          WebkitTransform:
+                            "translate3d(0, 0, 0) scale3d(0.5, 0.5, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)",
+                          MozTransform:
+                            "translate3d(0, 0, 0) scale3d(0.5, 0.5, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)",
+                          MsTransform:
+                            "translate3d(0, 0, 0) scale3d(0.5, 0.5, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)",
+                          transform:
+                            "translate3d(0, 0, 0) scale3d(0.5, 0.5, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)",
+                          opacity: "0",
+                        }}
+                        className="button banner-button"
+                      >
+                        <div className="button-icon-wrapper w-clearfix">
+                          <Image
+                            src="/images/cart.svg"
+                            width={24}
+                            height={24}
+                            alt=""
+                            className="button-icon left"
+                          />
+                        </div>
+                        <div>Shop Now</div>
+                      </div>
                     </div>
                   </div>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -336,17 +336,14 @@ function Article({ article }) {
                       className="post-item w-dyn-item"
                     >
                       <div className="post-card">
-                        <a
-                          href="#"
-                          className="post-card-preview w-inline-block"
-                        >
+                        <div className="post-card-preview w-inline-block">
                           <div
                             className="zoomed-image"
                             style={{
                               backgroundImage: `url(${post["Full-Size-Image"]})`,
                             }}
                           ></div>
-                        </a>
+                        </div>
                         <div className="post-card-content">
                           <div className="post-card-date-block">
                             <div className="post-card-date">20</div>
@@ -356,15 +353,17 @@ function Article({ article }) {
                             <div className="post-card-category">
                               <div>Published in </div>
                               <Link href={`/blog/category/${post["Category"]}`}>
-                                <a className="link-color">{post["Category"]}</a>
+                                <div className="link-color">
+                                  {post["Category"]}
+                                </div>
                               </Link>
                             </div>
                             <Link href={`/blog/${post["Slug"]}`}>
-                              <a className="link-dark w-inline-block">
+                              <div className="link-dark w-inline-block">
                                 <h4 className="post-card-heading">
                                   {post["Name"]}
                                 </h4>
-                              </a>
+                              </div>
                             </Link>
                           </div>
                         </div>
@@ -381,13 +380,9 @@ function Article({ article }) {
           </div>
           <div className="flex-center">
             <Link href="/blog">
-              <a
-                href="blog.html"
-                data-w-id="5a16660b-aaed-6532-4823-34458ba10f42"
-                className="button ghost w-inline-block"
-              >
+              <div className="button ghost w-inline-block">
                 <div>See All Posts</div>
-              </a>
+              </div>
             </Link>
           </div>
         </div>

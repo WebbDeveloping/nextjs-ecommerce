@@ -224,7 +224,7 @@ function SingleStoneType({ stoneType }) {
                 <div className="w-dyn-list">
                   <div role="list" className="sidebar-tags w-dyn-items">
                     <div role="listitem" className="w-dyn-item">
-                      <a href="#" className="tag"></a>
+                      <Link href="#" className="tag"></Link>
                     </div>
                   </div>
                   <div className="w-dyn-empty">
@@ -235,9 +235,9 @@ function SingleStoneType({ stoneType }) {
               <div className="sidebar-block">
                 <h4 className="sidebar-heading">Product Categories</h4>
                 <Link href="/shop">
-                  <a href="shop.html" className="sidebar-category">
+                  <div href="shop.html" className="sidebar-category">
                     All Products
-                  </a>
+                  </div>
                 </Link>
                 <div className="w-dyn-list">
                   <div role="list" className="w-dyn-items">
